@@ -81,6 +81,9 @@ gsap.registerPlugin(TextPlugin);
       .tx{
         font-size: 25px;
       }
+      .tx a:hover {
+        transform: none;
+      }
     }
 
 </style>

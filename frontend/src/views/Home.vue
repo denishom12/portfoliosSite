@@ -2,15 +2,17 @@
   <div class="home">
 
       <div class="firstblock">
-        <navbar></navbar>
         <div class="purpleTextImage">
           <div class="purple__text">
             <PurpleEyeText class="PT" ></PurpleEyeText>
           </div>
           <div class="eyeimg">
-            <img class="PL" src="../assets/eyelogo2.svg" alt="">
+            <div class="image__center">
+              <img class="PL" src="../assets/eyelogo3.svg" alt="">
+            </div>
           </div>
         </div>
+        <navbar></navbar>
       </div>
 
     <div class="secondblock">
@@ -25,14 +27,14 @@
             <p>Это одна из первых наших работ</p>
           </div>
           <div class="firstSite__image">
-            <ThreePanel class="image__one"></ThreePanel>
+            <router-link to="/first"><ThreePanel class="image__one"></ThreePanel></router-link>
           </div>
         </div>
 
 
         <div class="secondSite">
           <div class="secondSite__image">
-            <ThreePanelTwo class="image__one"></ThreePanelTwo>
+            <router-link to="/second"><ThreePanelTwo class="image__one"></ThreePanelTwo></router-link>
           </div>
           <div class="secondSite__text">
             <h1>Site for Yandex</h1>
@@ -43,7 +45,7 @@
 
         <div class="thirdSite">
           <div class="thirdSite__image">
-            <ThreePanelThree class="image__one"></ThreePanelThree>
+            <router-link to="/third"><ThreePanelThree class="image__one"></ThreePanelThree></router-link>
           </div>
           <div class="thirdSite__text">
             <h1>Site for Yandex</h1>
@@ -63,6 +65,11 @@
           </div>
         </div>
       </div>
+
+    <div class="mail">
+      <Mail></Mail>
+    </div>
+
   </div>
 </template>
 
@@ -70,12 +77,10 @@
 ::-webkit-scrollbar {
   width: 0;
 }
-
-.slider{
-  position: relative;
-  z-index: 100;
-  top: 50%;
+.home {
+  overflow: hidden;
 }
+
 .firstSite{
   display: flex;
   flex-direction: row;
@@ -100,6 +105,7 @@
   position: relative;
 }
 .image__one{
+  width: 100%;
   position: relative;
   left: -15%;
   transform: scale(0.5);
@@ -153,39 +159,58 @@
   font-family: Impact;
   width: 15%;
 }
+
 .purpleTextImage{
   width: 100%;
   height: 100%;
   position: fixed;
   left: 0;
   display: flex;
-  overflow: auto;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
 
 }
 .purple__text{
+  position: relative;
   display: block;
-  border: none;
   width: 100%;
   height: 100%;
 }
 .PT{
-  margin-left: 20%;
-  margin-top: 15%;
-  transform: scale(1.2);
+  width: 100%;
+  position: absolute;
+  top: 30%;
+
+  transform: translateY(-30%);
+
 }
 .eyeimg{
   display: block;
-  border: none;
   width: 100%;
+  max-width: 540px;
+}
+
+.image__center {
+  position: relative;
   height: 100%;
 }
+
 .PL{
-  margin-left: 25%;
-  margin-top: 9%;
-  transform: scale(1.5);
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  display: block;
+  transform: translateY(-30%);
 }
+
+@media (max-width: 1200px) {
+  .PT{
+    width: 100%;
+  }
+  .PL {
+  }
+}
+
+
 .twoelements{
   height: 100vh;
 }
@@ -215,6 +240,11 @@
   height: 100vh;
   background-color: #24253d;
 }
+.mail{
+  position: relative;
+  background-color: #7275a3;
+  height: 100vh;
+}
 .onetwoPeople{
   display: flex;
   flex-direction: row;
@@ -233,35 +263,10 @@
 }
 @media (max-width: 700px) {
   .onetwoPeople{
-
     flex-direction: column;
-
-
   }
   .secondblock{
     height: 110vh;
-  }
-  .PT{
-    margin-top: -25%;
-    transform: scale(1.1);
-    margin-left: 5%;
-  }
-  .PL{
-    margin-top: 15%;
-    transform: scale(1.5);
-  }
-  .purpleTextImage{
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: center;
-  }
-  .purple__text{
-    display: block;
-    border: none;
-  }
-  .eyeimg{
-    display: block;
-    border: none;
   }
   .image__one{
     transform: scale(0.2);
@@ -292,11 +297,12 @@
   import ThreePanelThree from "@/components/threePanelThree";
   import PeopleOne from "@/components/peopleOne";
   import PeopleTwo from "@/components/peopleTwo";
+  import Mail from "@/components/mail";
 
   export default {
     name: 'Home',
     components: {
-
+      Mail,
       PeopleOne,
       ThreePanel,
       PurpleEyeText,

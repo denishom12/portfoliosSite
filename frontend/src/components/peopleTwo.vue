@@ -35,7 +35,7 @@ gsap.registerPlugin(TextPlugin);
 export default {
   name: "peopleOne",
   mounted() {
-
+    if (window.innerWidth > 900) {
     let controller = new ScrollMagic.Controller();
     let tl = new gsap.timeline();
     tl.from(".letterTwo", {duration: 1, rotationY: 36, opacity: 0, yPercent:-300, stagger: 0.1, ease:"Expo.easeOut"})
@@ -54,6 +54,7 @@ export default {
     new ScrollMagic.Scene({triggerElement: ".people__imagetextTwo", triggerHook: "0.5"})
         .setTween(tl2)
         .addTo(controller);
+    }
   }
 }
 </script>
