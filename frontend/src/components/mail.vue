@@ -1,26 +1,28 @@
 <template>
 <div>
   <section id="contact">
-    <div class="container">
-      <div class="headInfo">
-        <div class="head">
-          <p class="title">Свяжитесь с нами <br>для сотрудничества</p>
-          <p class="line"></p>
-          <p class="subtitle">
-            Воспользуйтесь формой ниже, или отправьте письмо по нашему адресу<br>
-            <span class="ourMail">
-              PurpleEyeStudio@gmail.com
-            </span>
-          </p>
+    <div class="container__feed-back">
+      <div class="feed__back">
+        <div class="headInfo">
+          <div class="head">
+            <p class="title">Свяжитесь с нами <br>для сотрудничества</p>
+            <p class="line"></p>
+            <p class="subtitle">
+              Воспользуйтесь формой ниже, или отправьте письмо по нашему адресу<br>
+              <span class="ourMail">
+                PurpleEyeStudio@hotmail.com
+              </span>
+            </p>
+          </div>
         </div>
-      </div>
-      <div class="cont">
-        <form class="contactForm" action="#">
-          <input placeholder="<Имя>" name="name" type="text" required>
-          <input placeholder="<Email>" name="email" type="text" required>
-          <textarea placeholder="<Сообщение>" name="message" type="text"></textarea>
-          <input class="button" id="submit" type="submit" value="Отправить">
-        </form>
+        <div class="cont">
+          <form class="contactForm" action=”mailto:purpleeyestudio@hotmail.com” method="post" enctype=”multipart/form-data” name=”EmailForm”>
+            <input placeholder="<Имя>" name="name" type="text" required>
+            <input placeholder="<Email>" name="email" type="text" required>
+            <textarea placeholder="<Сообщение>" name="message" type="text"></textarea>
+            <button id="submit" type="submit">Отправить</button>
+          </form>
+        </div>
       </div>
     </div>
   </section>
@@ -35,12 +37,28 @@ name: "footer"
 </script>
 
 <style scoped>
-.container{
+
+#contact {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  box-sizing: border-box;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
 }
+
+.container__feed-back {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+
+}
+
+.feed__back {
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+
 .title{
   font-family: Impact;
   font-size: 42px;
@@ -64,9 +82,9 @@ name: "footer"
   align-items: center;
   width: 100%;
   margin-top: 1rem;
-  box-sizing: border-box;
 }
 .contactForm input[type="text"],input[type="email"], textarea{
+
   border-bottom: 2px solid #24253d;
   background: transparent;
   color: #24253d;
@@ -74,15 +92,33 @@ name: "footer"
   box-shadow: none;
   outline: none;
 }
-input{
+.contactForm textarea {
+  resize: none;
+  border-bottom: 2px solid #24253d;
+}
+
+.contactForm input{
   border: none;
   padding: 1rem;
   font-family: 'Overlock', Arial, Helvetica, sans-serif;
   width: 100%;
+  min-width: 635px;
   height: 40%;
 
 }
-.contactForm input[type="text"]:hover,input[type="email"]:hover, textarea:hover{
+
+
+.contactForm button{
+  border: 2px solid #24253d ;
+  padding: 1rem;
+  font-family: 'Overlock', Arial, Helvetica, sans-serif;
+  height: 40%;
+  margin-top: 30px;
+  background-color: #f300b4;
+  align-self: flex-end;
+}
+
+.cont form input[type="text"]:hover,input[type="email"]:hover, textarea:hover{
   border-bottom: 2px solid #f300b4;
   background: transparent;
   color: #24253d;
@@ -90,14 +126,15 @@ input{
   box-shadow: none;
   outline: none;
 }
-textarea{
-  border: none;
+
+.contactForm textarea{
   padding: 1rem;
   font-family: 'Overlock', Arial, Helvetica, sans-serif;
   width: 100%;
   height: 40%;
   overflow: auto;
 }
+
 input[type="submit"]{
   background: #f300b4;
   color: #24253d;
