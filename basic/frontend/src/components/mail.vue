@@ -109,13 +109,14 @@ name: "footer"
 
 
 .contactForm button{
-  border: 2px solid #24253d ;
+
   padding: 1rem;
   font-family: 'Overlock', Arial, Helvetica, sans-serif;
   height: 40%;
   margin-top: 30px;
   background-color: #f300b4;
   align-self: flex-end;
+  font-size: 25px;
 }
 
 .cont form input[type="text"]:hover,input[type="email"]:hover, textarea:hover{
@@ -138,7 +139,7 @@ name: "footer"
 input[type="submit"]{
   background: #f300b4;
   color: #24253d;
-  margin-top: 1rem;
+
   width: auto;
   float: right;
 }
