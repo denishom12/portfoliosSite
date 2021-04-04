@@ -1,6 +1,16 @@
 <template>
 <div>
-<h1>afsdfsd</h1>
+  <div class="site__navbar">
+
+  </div>
+  <div class="site__contain">
+    <div class="site__screen">
+
+    </div>
+    <div class="site__info">
+
+    </div>
+  </div>
 </div>
 </template>
 
@@ -10,6 +20,6 @@ name: "FirstSitePage"
 }
 </script>
 
-<style scoped>
+<style>
 
 </style>

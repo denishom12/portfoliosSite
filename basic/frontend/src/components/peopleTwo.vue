@@ -108,6 +108,15 @@ export default {
     font-size: 45px;
   }
 }
+@media (max-width: 600px) {
+  .people__textPTwo{
+    font-size: 16px;
+  }
+  .letterTwo{
+    font-size: 24px;
+  }
+}
+
 
 
 </style>

@@ -102,5 +102,13 @@ export default {
     font-size: 45px;
   }
 }
+@media (max-width: 600px) {
+  .people__textP{
+    font-size: 16px;
+  }
+  .letter{
+    font-size: 24px;
+  }
+}
 
 </style>

@@ -64,11 +64,13 @@ name: "footer"
   font-size: 42px;
   color: #24253d;
 }
+
 .subtitle{
   font-family: Impact;
   font-size: 20px;
   color: #24253d;
 }
+
 .line{
   background: #f300b4;
   width: 200px;
@@ -83,8 +85,8 @@ name: "footer"
   width: 100%;
   margin-top: 1rem;
 }
-.contactForm input[type="text"],input[type="email"], textarea{
 
+.contactForm input[type="text"],input[type="email"], textarea{
   border-bottom: 2px solid #24253d;
   background: transparent;
   color: #24253d;
@@ -92,6 +94,7 @@ name: "footer"
   box-shadow: none;
   outline: none;
 }
+
 .contactForm textarea {
   resize: none;
   border-bottom: 2px solid #24253d;
@@ -104,12 +107,9 @@ name: "footer"
   width: 100%;
   min-width: 635px;
   height: 40%;
-
 }
 
-
 .contactForm button{
-
   padding: 1rem;
   font-family: 'Overlock', Arial, Helvetica, sans-serif;
   height: 40%;

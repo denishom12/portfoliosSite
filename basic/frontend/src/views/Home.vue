@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
       <div class="firstblock">
         <div class="purpleTextImage">
           <div class="purple__text">
@@ -19,8 +19,6 @@
       <TwoPanel class="twoelements"></TwoPanel>
     </div>
       <div class="threeblock">
-
-
         <div class="firstSite">
           <div class="firstSite__text">
             <h1>Site for Google</h1>
@@ -70,6 +68,10 @@
       <Mail></Mail>
     </div>
 
+    <div class="footerol">
+      <Footer></Footer>
+    </div>
+
   </div>
 </template>
 
@@ -88,17 +90,17 @@
   justify-content: space-around;
   align-items: center;
   position: absolute;
-  width: 100%;
+
 }
 .firstSite__text{
-  width:30%;
+  width:10em;
   margin-left: 12%;
   position: relative;
   text-align: left;
 }
 .firstSite__text h1{
   font-family: Impact;
-  width: 15%;
+  width: 5em;
 }
 .firstSite__image{
   width:70%;
@@ -163,7 +165,7 @@
 .purpleTextImage{
   width: 100%;
   height: 100%;
-  position: fixed;
+  position: relative;
   left: 0;
   display: flex;
   overflow: hidden;
@@ -271,17 +273,56 @@
   .image__one{
     transform: scale(0.2);
   }
-
+  .people__one{
+    margin-top: -15%;
+  }
+  .people__two{
+    margin-top: 15%;
+  }
+  .onetwoPeople{
+    margin-top: -20%;
+  }
 }
+@media (max-width: 600px) {
+  .people__one{
+    margin-top: -25%;
+  }
+  .people__two{
+    margin-top: 25%;
+  }
+  .onetwoPeople{
+    margin-top: -30%;
+  }
+}
+
 @media (max-width: 900px) {
   .onetwoPeople{
     flex-direction: column;
   }
   .people__one{
-    margin-top: 10%;
+    margin-top: -15%;
   }
   .people__two{
- margin-top: 20%;
+    margin-top: 15%;
+  }
+  .onetwoPeople{
+    margin-top: -20%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .onetwoPeople{
+    margin-top: 20%;
+  }
+}
+@media (max-width: 1000px) {
+  .onetwoPeople{
+    margin-top: 30%;
+  }
+}
+@media (max-width: 400px) {
+  .fourBlock{
+    height: 120vh;
   }
 }
 
@@ -298,10 +339,12 @@
   import PeopleOne from "@/components/peopleOne";
   import PeopleTwo from "@/components/peopleTwo";
   import Mail from "@/components/mail";
+  import Footer from "@/components/footer";
 
   export default {
     name: 'Home',
     components: {
+      Footer,
       Mail,
       PeopleOne,
       ThreePanel,
